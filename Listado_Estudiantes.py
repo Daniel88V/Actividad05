@@ -33,11 +33,14 @@ class Clase:
         print(f"Estudiante {self.nombre} ingresado correctamente")
 def main():
     print(" ===BIENVENIDO AL MENÚ===")
-    print("Seleccione una opción")
     print("1. Registrar nuevo estudiante")
     print("2. Mostrar listado de estudiantes")
     print("3. Buscar estudiante (por carné)")
     print("4. Calcular promedio de todos los estudiantes")
     print("5. Salir")
+    print("Seleccione una opción: ")
+    opcion = input()
+    if opcion == "1":
+        Clase.ingreso_estudiante()
 if __name__ == "__main__":
     main()
