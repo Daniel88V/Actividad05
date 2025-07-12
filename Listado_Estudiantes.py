@@ -24,11 +24,13 @@ class Clase:
         nombre = input("Ingrese el nombre del estudiante: ")
         carne = input("Ingrese el carné del estudiante: ")
         carrera = input("Ingrese la carrera del estudiante: ")
-        nota = input("Ingrese el nota final del estudiante: ")
+        nota = int(input("Ingrese el nota final del estudiante: "))
         if self.encontrar_estudiante(carne):
             print("Error, este estudiante ya se encuentra en la lista")
             return
-
+        nuevo_estudiante = Clase(nombre, carne, carrera, nota)
+        self.estudiante.append(nuevo_estudiante)
+        print(f"Estudiante {self.nombre} ingresado correctamente")
 def main():
     print(" ===BIENVENIDO AL MENÚ===")
     print("Seleccione una opción")
