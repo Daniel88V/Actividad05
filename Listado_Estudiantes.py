@@ -13,6 +13,16 @@ class Estidiante:
 class Clase:
     def __init__(self, grado):
         self.nombre = grado
+        self.estudiante = []
+    def encontrar_estudiante(self, estudiante):
+        for estudiante in self.estudiante:
+            print(f"Ingrese el carné del estudiante que desea ver")
+            identificacion = input()
+            if estudiante.carne == identificacion:
+                print(estudiante)
+        return None
+    def ingreso_estudiante:
+        print(f"---Listado de estudiantes---")
 
 def main():
     print(" ===BIENVENIDO AL MENÚ===")
