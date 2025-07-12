@@ -14,15 +14,20 @@ class Clase:
     def __init__(self, grado):
         self.nombre = grado
         self.estudiante = []
-    def encontrar_estudiante(self, estudiante):
+    def encontrar_estudiante(self, carne):
         for estudiante in self.estudiante:
-            print(f"Ingrese el carné del estudiante que desea ver")
-            identificacion = input()
-            if estudiante.carne == identificacion:
-                print(estudiante)
+            if estudiante.carne == carne:
+                return estudiante
         return None
-    def ingreso_estudiante:
+    def ingreso_estudiante(self):
         print(f"---Listado de estudiantes---")
+        nombre = input("Ingrese el nombre del estudiante: ")
+        carne = input("Ingrese el carné del estudiante: ")
+        carrera = input("Ingrese la carrera del estudiante: ")
+        nota = input("Ingrese el nota final del estudiante: ")
+        if self.encontrar_estudiante(carne):
+            print("Error, este estudiante ya se encuentra en la lista")
+            return
 
 def main():
     print(" ===BIENVENIDO AL MENÚ===")
